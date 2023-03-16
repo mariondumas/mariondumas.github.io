@@ -1,81 +1,22 @@
 ---
 layout: page
-title: project 3
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
+title: AI and the green transition
+description:
+img: assets/img/3.png
 importance: 3
-category: work
+category: research
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+This project investigates the impact that AI has on the pace of green innovation and that ability of clean technologies to catch up faster with dirty ones.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Currently, we use patent data to quantify spillovers from AI to green technologies. <a href="https://www.pnas.org/doi/abs/10.1073/pnas.1613559113"> Acemoglu et al. (2016)</a> as well as <a href="https://arxiv.org/abs/2003.00580"> this recent paper by Pichler et al.</a> show that spillovers as measured by patent citations are surprisingly good predictors of the rate of innovation in a particular field. So, patents are a good place to start.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+We show that AI, as a general-purpose-technology, can significantly affect the dynamics of the green transition. We find that green technologies are better able to make use of AI than dirty ones, which is great news.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+We are furthering the analysis to understand how policies that increase the rate of application of AI to green technologies might affect overall carbon emissions.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+We are also investigating who creates AI inventions that are useful to green tech and who is able to apply them to green tech: do the spillovers happen primarily within firms and if so, what type of firms? or do they occur across firms but within regional networks of innovation? do large tech companies play an important role?
 
+In collaboration with Pia Andres and Eugenie Dugoua.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+<a href="https://www.lse.ac.uk/granthaminstitute/publication/directed-technological-change-and-general-purpose-technologies-can-ai-accelerate-clean-energy-innovation/">Summary and link to paper</a>

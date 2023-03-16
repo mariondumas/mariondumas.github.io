@@ -1,0 +1,13 @@
+Repositories folder was in /_site
+repositories.md was in /pages
+To bring it back in: 
+- add folder back in _site and edit that as well as the repository yml file
+- add repositories.md back in /pages
+- add to header
+
+Add Dan Rothman and Roland Scholz?
+
+
+Make teaching into a portfolio page like projects
+
+Where to put talks? 

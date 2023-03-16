@@ -2,11 +2,11 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+description:
 nav: true
 nav_order: 5
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+Sustainability: Environment, Economy and Society >> <a href="https://www.lse.ac.uk/study-at-lse/online-learning/courses/sustainability-environment-economy-society">Explore</a> this LSE Online Certificat Course!
 
-Organize your courses by years, topics, or universities, however you like!
+Contributor to Core-Econ! >> <a href="https://www.core-econ.org/">Explore</a> a new way of learning economics!
