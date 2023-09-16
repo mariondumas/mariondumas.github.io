@@ -11,3 +11,6 @@ Add Dan Rothman and Roland Scholz?
 Make teaching into a portfolio page like projects
 
 Where to put talks? 
+
+Emulate this website: 
+http://dcomin.host.dartmouth.edu/
