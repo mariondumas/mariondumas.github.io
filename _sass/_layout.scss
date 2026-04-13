@@ -40,7 +40,57 @@ body.sticky-bottom-footer {
  * Publications
  ******************************************************************************/
 
-// TODO: redefine publications layout.
+.about-section {
+  margin-top: 1.25rem;
+
+  h2 {
+    margin-bottom: 0.6rem;
+  }
+}
+
+.compact-publications {
+  .row {
+    margin-bottom: 0.55rem;
+  }
+
+  .title {
+    line-height: 1.25;
+    margin-bottom: 0.15rem;
+  }
+
+  .author {
+    line-height: 1.2;
+    margin-bottom: 0.1rem;
+  }
+
+  .periodical {
+    margin-bottom: 0.1rem;
+    line-height: 1.2;
+  }
+
+  .links {
+    margin-top: 0.2rem;
+  }
+}
+
+.publication-meta .pub-type {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--global-theme-color);
+  font-weight: 600;
+}
+
+.publication-meta .pub-sep {
+  margin: 0 0.35rem;
+  color: var(--global-text-color-light);
+}
+
+.publication-intro,
+.publication-note {
+  font-size: 0.95rem;
+  margin-bottom: 0.85rem;
+}
 
 
 /*****************************************************************************

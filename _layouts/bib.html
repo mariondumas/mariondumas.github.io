@@ -111,6 +111,14 @@
           {%- capture entrytype -%}<em>In {{entry.booktitle}}</em> {%- endcapture -%}
         {%- elsif thesis contains entry.type -%}
           {%- capture entrytype -%}<em>{{entry.school}}</em> {%- endcapture -%}
+        {%- elsif entry.type == "unpublished" -%}
+          {%- if entry.journal -%}
+            {%- capture entrytype -%}<em>{{entry.journal}}</em>{%- endcapture -%}
+          {%- elsif entry.journaltitle -%}
+            {%- capture entrytype -%}<em>{{entry.journaltitle}}</em>{%- endcapture -%}
+          {%- else -%}
+            {%- capture entrytype -%}<em>Working paper</em>{%- endcapture -%}
+          {%- endif -%}
         {%- else -%}
           {%- capture entrytype -%}{%- endcapture -%}
         {%- endif -%}
@@ -122,7 +130,20 @@
         {%- endif -%}
         {% assign entrytype_text = entrytype | strip_html | strip %}
         {%- capture periodical -%}{{ entrytype }}{%- if entrytype_text != "" and entryyear != "" -%}, {%- endif -%}{{ entryyear }}{%- endcapture -%} <!-- removed {{ entrymonth }} -->
-        <div class="periodical">
+        {% assign type_label = "Output" %}
+        {% if entry.type == "article" %}
+          {% assign type_label = "Journal article" %}
+        {% elsif entry.type == "unpublished" %}
+          {% assign type_label = "Working paper" %}
+        {% elsif entry.type == "incollection" %}
+          {% assign type_label = "Book chapter" %}
+        {% elsif entry.type == "inproceedings" %}
+          {% assign type_label = "Conference paper" %}
+        {% endif %}
+
+        <div class="periodical publication-meta">
+          <span class="pub-type">{{ type_label }}</span>
+          {% if entrytype_text != "" %}<span class="pub-sep">|</span>{% endif %}
           {{ periodical | strip }}
         </div>
         <div class="periodical">
@@ -131,7 +152,7 @@
 
           <!-- Links/Buttons -->
           <div class="links">
-          {%- if entry.abstract %}
+          {%- if entry.abstract and entry.abstract != "" %}
             <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
           {%- endif %}
           {%- if entry.arxiv %}
