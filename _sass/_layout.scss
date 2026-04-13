@@ -41,16 +41,29 @@ body.sticky-bottom-footer {
  ******************************************************************************/
 
 .about-section {
-  margin-top: 1.25rem;
+  margin-top: 0.75rem;
 
   h2 {
     margin-bottom: 0.6rem;
   }
 }
 
+.about-selected-publications h2 {
+  font-size: 1.25rem;
+}
+
+.about-selected-publications .col-sm-2.abbr {
+  display: none;
+}
+
+.about-selected-publications .col-sm-8 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
 .compact-publications {
   .row {
-    margin-bottom: 0.55rem;
+    margin-bottom: 0.4rem;
   }
 
   .title {
