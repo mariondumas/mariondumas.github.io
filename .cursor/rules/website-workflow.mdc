@@ -1,0 +1,41 @@
+---
+description: Jekyll website workflow — plan, execute, commit, push, verify deploy
+alwaysApply: true
+---
+
+# Website Workflow
+
+This is a Jekyll site (al-folio theme) deployed via GitHub Actions to mariondumas.github.io.
+
+## Iteration loop
+
+1. User describes desired change.
+2. Agent researches and presents a plan (Plan mode).
+3. User approves; agent switches to Agent mode.
+4. Agent edits files, builds locally with `LC_ALL=en_US.UTF-8 bundle exec jekyll build`, fixes any errors.
+5. Agent commits and pushes to `master` (the deploy workflow builds and force-pushes `gh-pages`).
+6. Agent verifies the deploy by checking the live site HTML.
+7. User inspects the result and describes the next change.
+
+## Build & deploy
+
+- Local build: `LC_ALL=en_US.UTF-8 bundle exec jekyll build`
+- Push target: `origin master` (triggers `.github/workflows/deploy.yml`)
+- Live site: `https://mariondumas.github.io`
+- Deploy branch: `gh-pages` (auto-updated by CI)
+
+## jekyll-scholar queries
+
+The `--sort_by` and `--order` flags break `-q` query parsing in jekyll-scholar 7.1.2.
+Use `sort_by` and `order` in `_config.yml` scholar block instead.
+For entry-type filters use `@article`, `@unpublished`, etc., not `@*[type=...]`.
+
+## Key files
+
+- `_config.yml` — site config, `max_width`, `scholar:` settings
+- `_layouts/bib.html` — bibliography entry template (shared by all pages)
+- `_includes/selected_papers.html` — homepage selected papers query
+- `_pages/publications.md` — publications page with three-section layout
+- `_layouts/about.html` — homepage layout
+- `_sass/_layout.scss` — publication and homepage styling
+- `_bibliography/papers.bib` — all bibliography entries

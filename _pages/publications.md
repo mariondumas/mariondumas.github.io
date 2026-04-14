@@ -13,13 +13,13 @@ nav_order: 1
   </p>
 
   <h2>Working Papers</h2>
-  {% bibliography -f papers --sort_by year --order descending -q @*[type=unpublished]* %}
+  {% bibliography -f papers -q @unpublished %}
 
   <h2>Key Publications</h2>
-  {% bibliography -f papers --sort_by year --order descending -q @*[selected=true && type!=unpublished]* %}
+  {% bibliography -f papers -q @article[selected=true],@incollection[selected=true],@inproceedings[selected=true] %}
 
   <h2>All Other Outputs</h2>
-  {% bibliography -f papers --sort_by year --order descending -q @*[selected!=true && type!=unpublished]* %}
+  {% bibliography -f papers -q @article[selected!=true],@incollection[selected!=true],@inproceedings[selected!=true] %}
 
   <p class="publication-note">
     To add a PDF button for an entry, add <code>pdf = {filename.pdf}</code> in
